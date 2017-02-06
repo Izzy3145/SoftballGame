@@ -6,23 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.courtcounter.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dark_leather" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/softballregionals"
-        android:scaleType="centerCrop"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/title"
-            android:textSize="24sp"
-            android:gravity="center"/>
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:padding="4dp"
-                    android:text="@string/home"/>
+                    android:text="@string/home" />
 
                 <TextView
                     android:id="@+id/home_score"
@@ -48,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:padding="4dp"
-                    android:text="@string/default_number"/>
+                    android:text="@string/default_number" />
 
                 <Button
                     style="@style/ScoreButton"
@@ -63,7 +66,7 @@
                 <Button
                     style="@style/ScoreButton"
                     android:onClick="addOneForHome"
-                    android:text="@string/half_rounder"/>
+                    android:text="@string/half_rounder" />
 
 
             </LinearLayout>
@@ -79,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:padding="4dp"
-                    android:text="@string/away"/>
+                    android:text="@string/away" />
 
                 <TextView
                     android:id="@+id/away_score"
@@ -87,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:padding="4dp"
-                    android:text="@string/default_number"/>
+                    android:text="@string/default_number" />
 
                 <Button
                     style="@style/ScoreButton"
@@ -112,121 +115,128 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#85D19E56">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Batting Team:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/strikes"
+                    style="@style/OutButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:onClick="addOneStrike"
+                    android:text="@string/three_strikes" />
+
+                <TextView
+                    android:id="@+id/total_strikes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/OutNumber"
+                    android:text="@string/default_number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/OutButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:onClick="addOneCatch"
+                    android:text="@string/caught" />
+
+                <TextView
+                    android:id="@+id/total_catches"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/OutNumber"
+                    android:text="@string/default_number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/OutButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:onClick="addOneStump"
+                    android:text="@string/stumped" />
+
+                <TextView
+                    android:id="@+id/total_stumps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/OutNumber"
+                    android:text="@string/default_number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Total Out" />
+
+                <TextView
+                    android:id="@+id/total_out"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_number"
+                    style="@style/OutNumber"/>
+
+            </LinearLayout>
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Batting Team:"
-            android:gravity="center"/>
+            android:text="When Total Out reaches 5, swap sides." />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                style="@style/OutButton"
-                android:id="@+id/strikes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/three_strikes"
-                android:onClick="addOneStrike"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/total_strikes"
-                android:text="@string/default_number"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                style="@style/OutButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/caught"
-                android:onClick="addOneCatch"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/total_catches"
-                android:text="@string/default_number"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                style="@style/OutButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/stumped"
-                android:onClick="addOneStump"/>
-
-            <TextView
-                android:id="@+id/total_stumps"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/default_number"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="Total Out" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/total_out"
-                android:text="@string/default_number"/>
-
-        </LinearLayout>
-        </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text = "When Total Out reaches 5, swap sides."/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="New Innings"
-        android:onClick="newInnings"/>
+            android:layout_gravity="center"
+            android:onClick="newInnings"
+            android:text="New Innings" />
 
     </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="New Game"
-        android:onClick="newGame" />
+        android:onClick="newGame"
+        android:text="New Game" />
+
 </RelativeLayout>
