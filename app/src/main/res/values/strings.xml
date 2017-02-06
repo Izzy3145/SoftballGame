@@ -12,5 +12,7 @@
     <string name="new_innings">new innings</string>
     <string name="new_game">new game</string>
     <string name="default_number">0</string>
-
+    <string name="battle">Batting Team:</string>
+    <string name="total_out">Total Out</string>
+    <string name="when">When five out, start new innings.</string>
 </resources>
