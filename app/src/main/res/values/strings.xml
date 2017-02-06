@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CourtCounter</string>
+    <string name="title">Charity Softball Game</string>
+    <string name="home">Home</string>
+    <string name="away">Away</string>
+    <string name="home_run">home run +4</string>
+    <string name="rounder">rounder +2</string>
+    <string name="half_rounder">half rounder +1</string>
+    <string name="three_strikes">Three strikes</string>
+    <string name="caught">caught</string>
+    <string name="stumped">stumped</string>
+    <string name="new_innings">new innings</string>
+    <string name="new_game">new game</string>
+    <string name="default_number">0</string>
+
+</resources>
