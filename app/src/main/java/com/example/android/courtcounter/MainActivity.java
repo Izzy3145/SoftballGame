@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static com.example.android.courtcounter.R.id.home_score;
+
 public class MainActivity extends AppCompatActivity {
 
     int homeScore;
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     int catches;
     int stumps;
     int totalOut;
+    static final String STATE_HOME_SCORE = "homepoints";
+
 
 
     @Override
@@ -20,6 +24,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(STATE_HOME_SCORE, homeScore);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        homeScore = savedInstanceState.getInt(STATE_HOME_SCORE);
+    }
+
 
     /**
      * increases home team score by either 4, 2 or 1
@@ -44,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Home team.
      */
     public void displayForHomeTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.home_score);
+        TextView scoreView = (TextView) findViewById(home_score);
         scoreView.setText(String.valueOf(score));
     }
 
