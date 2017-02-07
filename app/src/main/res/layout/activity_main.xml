@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/dark_leather" />
+        android:src="@drawable/wooden" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#90062538"
+            android:background="#953B2A12"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp">
 
