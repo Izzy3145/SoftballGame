@@ -9,6 +9,10 @@ public class MainActivity extends AppCompatActivity {
 
     int homeScore;
     int awayScore;
+    int strikes;
+    int catches;
+    int stumps;
+    int totalOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,11 +73,6 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.away_score);
         scoreView.setText(String.valueOf(score));
     }
-
-    int strikes;
-    int catches;
-    int stumps;
-    int totalOut;
 
     public void addOneStrike(View v) {
         strikes = strikes + 1;

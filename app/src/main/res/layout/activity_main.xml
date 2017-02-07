@@ -18,8 +18,8 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="@string/title"
-            style="@style/headline" />
+            style="@style/headline"
+            android:text="@string/title" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,15 +101,15 @@
         <!-- outs count and buttons -->
 
         <LinearLayout
+            style="@style/sub_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            style="@style/sub_background">
+            android:orientation="vertical">
 
             <TextView
+                style="@style/team"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/team"
                 android:text="@string/battle" />
 
             <!-- three strikes button and count-->
@@ -131,10 +131,10 @@
 
                 <TextView
                     android:id="@+id/total_strikes"
+                    style="@style/OutNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    style="@style/OutNumber"
                     android:text="@string/default_number" />
             </LinearLayout>
 
@@ -156,10 +156,10 @@
 
                 <TextView
                     android:id="@+id/total_catches"
+                    style="@style/OutNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    style="@style/OutNumber"
                     android:text="@string/default_number" />
             </LinearLayout>
 
@@ -181,10 +181,10 @@
 
                 <TextView
                     android:id="@+id/total_stumps"
+                    style="@style/OutNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    style="@style/OutNumber"
                     android:text="@string/default_number" />
             </LinearLayout>
 
@@ -197,19 +197,19 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/team"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="@string/total_out"
-                    style="@style/team" />
+                    android:text="@string/total_out" />
 
                 <TextView
                     android:id="@+id/total_out"
+                    style="@style/OutNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/default_number"
-                    style="@style/OutNumber"/>
+                    android:text="@string/default_number" />
 
             </LinearLayout>
 
@@ -219,9 +219,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:backgroundTint="@color/colorDarkButton"
                 android:onClick="newInnings"
-                android:text="@string/new_innings"
-                android:backgroundTint="@color/colorDarkButton"/>
+                android:text="@string/new_innings" />
 
         </LinearLayout>
 
@@ -232,9 +232,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorLightButton"
         android:onClick="newGame"
         android:text="@string/new_game"
-        android:textSize="@dimen/subheading"
-        android:backgroundTint="@color/colorLightButton"/>
+        android:textSize="@dimen/subheading" />
 
 </RelativeLayout>
