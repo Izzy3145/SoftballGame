@@ -15,22 +15,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="@string/title"
-            android:textSize="24sp" />
+            style="@style/headline" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <!-- home score and buttons -->
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -39,18 +35,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="4dp"
+                    style="@style/team"
                     android:text="@string/home" />
 
                 <TextView
                     android:id="@+id/home_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="4dp"
+                    style="@style/score"
                     android:text="@string/default_number" />
 
                 <Button
@@ -71,6 +61,8 @@
 
             </LinearLayout>
 
+            <!-- away score and buttons -->
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -78,18 +70,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="4dp"
+                    style="@style/team"
                     android:text="@string/away" />
 
                 <TextView
                     android:id="@+id/away_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="4dp"
+                    style="@style/score"
                     android:text="@string/default_number" />
 
                 <Button
@@ -112,21 +98,21 @@
 
         </LinearLayout>
 
+        <!-- outs count and buttons -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#953B2A12"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp">
+            style="@style/sub_background">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:textSize="24dp"
-                android:text="@string/battle"
-                android:textStyle="bold"/>
+                style="@style/team"
+                android:text="@string/battle" />
+
+            <!-- three strikes button and count-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,6 +138,8 @@
                     android:text="@string/default_number" />
             </LinearLayout>
 
+            <!-- caught button and count-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -174,6 +162,8 @@
                     style="@style/OutNumber"
                     android:text="@string/default_number" />
             </LinearLayout>
+
+            <!-- stumped button and count-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -198,6 +188,8 @@
                     android:text="@string/default_number" />
             </LinearLayout>
 
+            <!-- total out count -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -209,10 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="@string/total_out"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:layout_marginLeft="4dp"
-                    android:textStyle="bold"/>
+                    style="@style/team" />
 
                 <TextView
                     android:id="@+id/total_out"
@@ -224,13 +213,15 @@
 
             </LinearLayout>
 
+            <!-- New Innings button -->
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:onClick="newInnings"
-                android:text="New Innings"
-                android:backgroundTint="#062538"/>
+                android:text="@string/new_innings"
+                android:backgroundTint="@color/colorDarkButton"/>
 
         </LinearLayout>
 
@@ -242,8 +233,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="newGame"
-        android:text="New Game"
-        android:textSize="18sp"
-        android:backgroundTint="#296185"/>
+        android:text="@string/new_game"
+        android:textSize="@dimen/subheading"
+        android:backgroundTint="@color/colorLightButton"/>
 
 </RelativeLayout>

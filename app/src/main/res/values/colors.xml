@@ -3,5 +3,9 @@
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#216224</color>
     <color name="colorAccent">#29AF79</color>
-    <color name="colorButton">#2D1236</color>
+    <color name="text">#FFFFFF</color>
+    <color name="colorLightButton">#296185</color>
+    <color name="colorDarkButton">#062538</color>
+    <color name="sub_background">#952B1F0D</color>
+    <color name="outs_number_background">#75296185</color>
 </resources>
