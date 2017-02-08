@@ -17,8 +17,8 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/headline"
-                android:text="@string/title" />
+                style="@style/landscape_headline"
+                android:text="@string/title"/>
 
             <!-- added element for landscape view-->
 
