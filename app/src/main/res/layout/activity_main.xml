@@ -225,6 +225,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/colorDarkButton"
+                android:textColor="@color/text"
                 android:onClick="newInnings"
                 android:text="@string/new_innings" />
 
@@ -238,6 +239,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/colorLightButton"
+        android:textColor="@color/text"
         android:onClick="newGame"
         android:text="@string/new_game"
         android:textSize="@dimen/subheading" />

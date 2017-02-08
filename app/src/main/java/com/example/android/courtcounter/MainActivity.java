@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         catches = savedInstanceState.getInt(STATE_CATCHES);
         stumps = savedInstanceState.getInt(STATE_STUMPS);
         totalOut = savedInstanceState.getInt(STATE_TOTAL_OUT);
+        displayForHomeTeam(homeScore);
+        displayForAwayTeam(awayScore);
+        displayStrikes(strikes);
+        displayCatches(catches);
+        displayStumps(stumps);
     }
 
 
