@@ -1,5 +1,6 @@
 package com.example.android.courtcounter;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -57,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
         displayCatches(catches);
         displayStumps(stumps);
     }
-
-
     /**
      * increases home team score by either 4, 2 or 1
      */

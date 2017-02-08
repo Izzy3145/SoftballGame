@@ -62,12 +62,5 @@
         <item name="android:background">@color/sub_background</item>
     </style>
 
-    <style name="landscape_headline" parent="headline">
-        <item name="android:layout_height">@dimen/title_height</item>
-    </style>
-
-
-
-
 
 </resources>

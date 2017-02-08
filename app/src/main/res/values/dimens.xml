@@ -8,4 +8,5 @@
     <dimen name="subheading">16sp</dimen>
     <dimen name="right_space">4dp</dimen>
     <dimen name="small_margin">2dp</dimen>
+    <dimen name="title_height">70dp</dimen>
 </resources>
