@@ -9,13 +9,18 @@ import static com.example.android.courtcounter.R.id.home_score;
 
 public class MainActivity extends AppCompatActivity {
 
-    int homeScore;
-    int awayScore;
-    int strikes;
-    int catches;
-    int stumps;
-    int totalOut;
+    int homeScore = 0;
+    int awayScore = 0;
+    int strikes = 0;
+    int catches = 0;
+    int stumps = 0;
+    int totalOut = 0;
     static final String STATE_HOME_SCORE = "homepoints";
+    static final String STATE_AWAY_SCORE = "awaypoints";
+    static final String STATE_STRIKES = "strikepoints";
+    static final String STATE_CATCHES = "catchpoints";
+    static final String STATE_STUMPS = "stumppoints";
+    static final String STATE_TOTAL_OUT = "totaloutpoints";
 
 
 
@@ -28,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt(STATE_HOME_SCORE, homeScore);
+        savedInstanceState.putInt(STATE_AWAY_SCORE, awayScore);
+        savedInstanceState.putInt(STATE_STRIKES, strikes);
+        savedInstanceState.putInt(STATE_CATCHES, catches);
+        savedInstanceState.putInt(STATE_STUMPS, stumps);
+        savedInstanceState.putInt(STATE_TOTAL_OUT, totalOut);
         // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
@@ -36,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         homeScore = savedInstanceState.getInt(STATE_HOME_SCORE);
+        awayScore = savedInstanceState.getInt(STATE_AWAY_SCORE);
+        strikes = savedInstanceState.getInt(STATE_STRIKES);
+        catches = savedInstanceState.getInt(STATE_CATCHES);
+        stumps = savedInstanceState.getInt(STATE_STUMPS);
+        totalOut = savedInstanceState.getInt(STATE_TOTAL_OUT);
     }
 
 
