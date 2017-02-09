@@ -57,9 +57,10 @@ public class MainActivity extends AppCompatActivity {
         displayStrikes(strikes);
         displayCatches(catches);
         displayStumps(stumps);
+        displayTotalOut(totalOut);
     }
     /**
-     * increases home team score by either 4, 2 or 1
+     * increases Home team score by either 4, 2 or 1
      */
 
     public void addFourForHome(View v) {
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * increases home team score by either 4, 2 or 1
+     * increases Away team score by either 4, 2 or 1
      */
 
     public void addFourForAway(View v) {
@@ -105,12 +106,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Home team.
+     * Displays the given score for Away team.
      */
     public void displayForAwayTeam(int score) {
         TextView scoreView = (TextView) findViewById(R.id.away_score);
         scoreView.setText(String.valueOf(score));
     }
+
+    /**
+     * adds one strike and updates the display
+     */
 
     public void addOneStrike(View v) {
         strikes = strikes + 1;
